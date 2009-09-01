@@ -15,14 +15,11 @@ DIRNAME = os.path.dirname(__file__)
 if LOCAL_DEV:
     INTERNAL_IPS = ('127.0.0.1',)
 
-# trick to get the two-levels up directory, which for the "large" project should be the satchmo dir
-# for most "normal" projects, you should directly set the SATCHMO_DIRNAME, and skip the trick
-_parent = lambda x: os.path.normpath(os.path.join(x, '..'))
-SATCHMO_DIRNAME = _parent(_parent(DIRNAME))
+SATCHMO_DIRNAME = DIRNAME
 
 
-DJANGO_PROJECT = 'vendamos'
-DJANGO_SETTINGS_MODULE = 'vendamos.settings'
+DJANGO_PROJECT = 'rinconcolombia'
+DJANGO_SETTINGS_MODULE = 'rinconcolombia.settings'
 
 ADMINS = (
      ('Ariel Núñez', 'ingenieroariel@gmail.com'),
@@ -39,7 +36,7 @@ DATABASE_HOST = ''             # Set to empty string for localhost. Not used wit
 DATABASE_PORT = ''             # Set to empty string for default. Not used with sqlite3.
 
 DATABASE_ENGINE = 'sqlite3'
-DATABASE_NAME = os.path.join(DIRNAME, 'vendamos.db')
+DATABASE_NAME = os.path.join(DIRNAME, 'rinconcolombia.db')
 
 
 
@@ -116,7 +113,7 @@ TEMPLATE_CONTEXT_PROCESSORS = ('satchmo_store.shop.context_processors.settings',
                           )
 
 #ROOT_URLCONF = 'satchmo.urls'
-ROOT_URLCONF = 'vendamos.urls'
+ROOT_URLCONF = 'rinconcolombia.urls'
 
 INSTALLED_APPS = (
     'django.contrib.sites',
@@ -163,7 +160,7 @@ INSTALLED_APPS = (
     'debug_toolbar',
     'app_plugins',
     'cpserver',
-    'vendamos.localsite',
+    'rinconcolombia.localsite',
     'django.contrib.flatpages',
 )
 
