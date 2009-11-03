@@ -62,8 +62,7 @@ SITE_ID = 1
 # Absolute path to the directory that holds media.
 # Example: "/home/media/media.lawrence.com/"
 #Image files will be stored off of this path
-#MEDIA_ROOT = os.path.join(DIRNAME, 'static/')
-MEDIA_ROOT = "/home/ingenieroariel/store/static"
+MEDIA_ROOT = os.path.join(DIRNAME, 'static/')
 # URL that handles the media served from MEDIA_ROOT.
 # Example: "http://media.lawrence.com"
 #MEDIA_URL = 'site_media'
