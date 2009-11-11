@@ -92,7 +92,7 @@ MIDDLEWARE_CLASSES = (
     "satchmo_store.shop.SSLMiddleware.SSLRedirect",
     "satchmo_ext.recentlist.middleware.RecentProductMiddleware",
     #'djangologging.middleware.LoggingMiddleware',
-    'debug_toolbar.middleware.DebugToolbarMiddleware',
+    #'debug_toolbar.middleware.DebugToolbarMiddleware',
     "django.contrib.flatpages.middleware.FlatpageFallbackMiddleware",
 )
 
@@ -156,7 +156,7 @@ INSTALLED_APPS = (
     'django_extensions',
     'satchmo_ext.tieredpricing',
     'typogrify',
-    'debug_toolbar',
+    #'debug_toolbar',
     'app_plugins',
     'cpserver',
     'rinconcolombia.localsite',

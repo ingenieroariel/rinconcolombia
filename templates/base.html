@@ -11,23 +11,54 @@
 {% block body %}
 <body{% if bodyid %} id="{{ bodyid }}"{% endif %}{% if bodyclass %} class="{{ bodyclass }}"{% endif %}>
     {% plugin_point "page_top" %}
-    <div id="container"><div id="navbarii"></div>
-	    <div id="top">
-	        <!--<h1>{{ shop_name }}</h1>--><h1><img src="{{ media_url }}images/logo.png" alt="Rincon Colombia" title="ir al inicio" /></h1>
+    <div id="container">
+	    <div id="top"><div id="logo">
+	        <!--<h1>{{ shop_name }}</h1>--><h1><img src="{{ media_url }}images/logo-trans.png" alt="Rincon Colombia" title="ir al inicio" /></h1>
 	    		</div>
+				
+				<div id="search">
+			{% satchmo_search_form %}
+		</div>
+		</div> <!-- fin de top -->
 	    <div id="navbar">
 	    <ul>
 	    	{% block navbar %}Breadcrumbs here{% endblock %}
-	   	</ul>
-    </div>
+	   	
+		<div class="login-top">
+<li>
+{% if user.is_staff %}
+
+		<a href="/admin" target="blank">{% trans "Admin" %}</a><br/>
+		{% endif %}
+	    {% if user.is_authenticated %}
+		{% url satchmo_account_info as accounturl %}
+<li>        {% if accounturl %}<a href="{{ accounturl }}" target="blank">{% trans "Account Details" %}</a><br/>{% endif %}
+<li>         <a href="{{ logout_url }}?next={{request.path}}">{% trans "Log out" %}</a><br/></li>
+	    {% else %}
+<li>         <a href="{{ login_url }}?next={{request.path}}">{% trans "Log in" %}</a><br/></li>
+	    {% endif %}
+</li>
+<li>
+		{% url satchmo_cart as carturl %}
+<li>	    {% if carturl %}<a href="{{ carturl }}">{% trans "Cart" %}</a>{% endif %}</li>
+
+	    {% if cart_count %}
+        ({{ cart_count }}{% if cart.total %} - {{ cart|discount_cart_total:sale|currency }}{% endif %})<br/>
+		{% url satchmo_checkout-step1 as checkouturl %}
+<li>        {% if checkouturl %}<a href="{{ checkouturl }}">{% trans "Check out" %}</a>{% endif %}</li>
+	    {% endif %}
+</li>
+
+		</div><!-- fin del login-top -->
+   
+</ul>
+   </div>
     <div id="sidebar-secondary">
 		{% block sidebar-secondary %}
-		<div id="search">
-			{% satchmo_search_form %}
-		</div>
+		
 		<div>
 			{% block sidebar %}
-			<h3>{% trans "Shop Categories" %}</h3>
+			<!--<h3>{% trans "Shop Categories" %}</h3>-->
 			{% block sidebar-categories %}
 			<div id="menu_container">
 				{% category_tree %}
@@ -43,7 +74,20 @@
 	</div>
 
 	<div id="sidebar-primary">{# rightnav #}
-		{% block sidebar-primary %}
+	<h2 class="producto-estrella">Producto Estrella</h2>
+	<div class="resaltado">
+	<img src="{{ media_url }}images/botella.jpg" alt="botella" />
+	<div class="description">Botella</div>
+	<div class="price">$99,700</div>
+	</div>
+	<h2 class="mas-vendido">Lo mas vendido</h2>
+	<div class="resaltado">
+	<img src="{{ media_url }}images/botella.jpg" alt="botella" />
+	<div class="description">Botella</div>
+	<div class="price">$99,700</div>
+	</div>
+	
+	<!--	{% block sidebar-primary %}
 		<h3>{% trans "Quick Links" %}</h3>
 		{% url satchmo_product_recently_added as recenturl %}
 		{% if recenturl %}<a href="{{ recenturl }}">{% trans "Recently Added" %}</a>{% endif %}
@@ -51,7 +95,7 @@
 		{% if popularurl %}<br/><a href="{{ popularurl }}">{% trans "Best Sellers" %}</a>{% endif %}
 		{% plugin_point "sidebar_links" %}
 
-	    <h3>{% trans "Account Information" %}</h3>
+	   <h3>{% trans "Account Information" %}</h3>
 	    {% if user.is_staff %}
 		<a href="/admin" target="blank">{% trans "Admin" %}</a><br/>
 		{% endif %}
@@ -82,7 +126,7 @@
 		{% block sidebar-primary-bottom %}
 		{% plugin_point "shop_sidebar_primary" %}
 		{% endblock %}
-		{% endblock sidebar-primary %}
+		{% endblock sidebar-primary %}-->
 	</div>
 
 	<div id="content">
@@ -91,7 +135,7 @@
 
 	<div id="footer">
 		{% block footer %}
-		{% blocktrans %}Powered by <a href="http://www.satchmoproject.com">Satchmo</a>.{% endblocktrans %}
+		
 		{% endblock %}
 	</div>
 

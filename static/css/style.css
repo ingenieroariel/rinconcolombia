@@ -5,8 +5,7 @@ width: 90%;
 margin: 10px auto;
 background-color: #fff;
 color: #333;
-//border: 1px solid gray;
-line-height: 130%;
+line-height: 180%;
 padding: 0;
 margin-top: 0;
 }
@@ -16,8 +15,9 @@ width: 100%;
 background: url(../images/back-navbar.png) bottom;
 border-bottom: 1px solid #ccc;
 color: #333;
-//line-height: 90%;	
 height:22px;
+margin:0;
+padding:0;
 }
 #navbarii {
 float:right;
@@ -32,39 +32,63 @@ margin-top:161px;
 }
 
 a {
-color:#3A1D0F;
+color:#666;
 }
 a:hover{
-color:#7D5F47;
+color:#333;
 }
 #top {
-padding: .5em;
 background-color: #ddd;
-border-right: 6px solid #FFFE00;
-background-image: url(../images/back1.jpg);
-height:150px;
+height:110px;
+border-top: 3px red solid;
+background: url(../images/back-top.png) repeat-x ;
+margin:0 !important;
 }
 
 #top h1 {
 padding: 0;
 margin: 0;
 text-align:center;
-padding-top:30px;
-margin-left:16% !important;
+padding:20px 0 0 20px;
 position:absolute;
 
 }
+#logo {
+float:left;
+width:337px;
+height:63px;
+}
+#search {
+float:left;
+width:500px;
+height:30px;
+margin-top:7px;
+margin-left:25px;
+}
 
-#search input{
-border:#3A1D0F solid 1px;
+.searchText {
+width: 385px;
+height: 26px;
+float:left;
+margin-top:22px;
+border: solid #b3b3b3 1px;
+background: url(../images/back-input-search.png) repeat-x;
+font-size: 20px;
+padding: 2px;
 }
-#search input-button{
-width:22px;
-height:22px;
-display:block;
-background:url(../images/find-icon.png);
+.searchSubmit {
+width: 70px;
+height:32px;
+float:left;
+margin: 0 0 0 8px;
+background: url(../images/back-search.png) repeat-x;
+border: 1px solid red;
 color:#fff;
+font-weight:bold;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
 }
+
 
 h5 {
 margin: 0;
@@ -76,17 +100,19 @@ float: left;
 width: 160px;
 margin: 0;
 padding: 1em;
+background: url(../images/back-sidebar.png) repeat-x;
 }
 
 #sidebar-secondary h3, #sidebar-primary h3 {
-	font-size: 140%;
+	font-size: 16px;
 	font-weight: bold;
 	margin-bottom: 0.1em;
 	margin-top: 1em;	
-	color:#3A1D0F;
-	text-shadow: 1px 0px 0px #7D5F47;
+	color:#ff0000;
+	text-shadow: 0px 1px 1px #ccc;
 	padding-bottom: 3px; 
-	font-family:serif;
+	font-family:sans-serif;
+	letter-spacing:2px;
 }
 
 #sidebar-primary {
@@ -94,9 +120,9 @@ float: right;
 width: 160px;
 margin: 0;
 padding: 1em;
-//background-color: #ddd;
-border: 7px solid #f4e500;
-//border-bottom: 1px solid silver;
+border-bottom: 1px solid silver;
+background: url(../images/back-sidebar.png) repeat-x;
+
 }
 
 /*#sidebar-primary .wishlist {
@@ -105,9 +131,13 @@ border: 7px solid #f4e500;
 */
 
 #content {
-margin-left: 200px;
-margin-right: 200px;
+margin-left: 184px;
+margin-right: 184px;
 padding: 1em;
+background:url(../images/back-highligh.png) repeat-x #fced21;
+border-bottom: 2px solid #fced21;
+-moz-border-radius: 0 0 3px 3px;
+-webkit-border-radius:0 0 3px 3px;
 }
 
 body {
@@ -115,7 +145,7 @@ body {
 	font-size: 12px;
 	margin-top: 0px;
 	padding-top: 0px;
-	background:url(../images/back1.jpg) repeat #140B06 center fixed;
+	background:#fff;
 }
 
 #pagination {
@@ -170,8 +200,6 @@ clear: both;
 margin: 0;
 padding: .5em;
 color: #333;
-//background-color: #ddd;
-//border-top: 1px solid gray;
 background: url(../images/back-navbar.png) bottom;
 
 border-bottom: 1px solid #ccc;
@@ -194,11 +222,13 @@ margin-left: 10px;
 margin-right: 10px;
 margin-bottom:2px;
 text-align: center;
+-moz-border-radius: 3px;
+-webkit-border-radius: 3px;
 }
 
 .brandImage,
 .productImage:hover {
-border:solid 1px #F4E500;
+border:solid 1px #ff0000;
 border-collapse:collapse;
 }
 
@@ -207,11 +237,7 @@ text-align: center;
 font-size: 10pt;
 }
 
-#menu_container ul {
-margin: 0;
-padding: 0;
-list-style-type: none;
-}
+
 
 
 #shipping ul li {
@@ -220,7 +246,6 @@ text-decoration: none;
 padding-left: 1em;
 text-indent: -1em;
 }
-
 #checkoutprogress {
 border-style: solid;
 border-width: 1px;
@@ -285,44 +310,58 @@ background-color: white;
 	display: inline;
 }
 
+#menu_container ul {
+margin: 0;
+padding: 0;
+list-style-image: url(../images/list-icon-trans.png);
+list-style-type:circle;
+list-style-position:inside;
+}
+
 #menu_container a {
-display: block;
-color: #FFF;
-text-shadow: 0 1px 1px #180904;
-background-color: #3A1D0F;
+color: #FF0000;
+text-shadow: 0 1px 1px #ccc;
 width: 9em;
-padding: 3px 17px 3px 8px;
+padding: 3px 17px 3px 0;
 text-decoration: none;
-border-bottom: 1px dotted #fff;
 font-weight: bold;
+font-size: 16px;
+letter-spacing: 2px;
+list-style: none !important;
+
 }
 
 #menu_container a:hover {
-background-color: #F4E500;
-color: #3A1D0F;
-text-shadow:none;
+text-decoration:underline;
+color:#333;
+text-shadow: 0 1px 1px #ccc;
+}
+
+#menu_container  li a {
+
+list-style-type: circle !important;
+margin-bottom:5px;
+
+
 }
 
 #menu_container li li a {
-display: block;
-color: #FFF;
-background-color: #5D3E2A;
-width: 9em;
-padding: 3px 8px 3px 17px;
+
+color: #666;
+padding: 3px 8px 3px 0;
 text-decoration: none;
-border-bottom: 1px dotted #fff;
 font-weight: normal;
+font-size: 14px;
+
 }
 
 #menu_container li li li a {
-display: block;
-color: #FFF;
-width: 9em;
-background-color: #7D5F47;
-padding: 3px 1px 3px 24px;
+color: #666;
+padding: 3px 8px 3px 0;
 text-decoration: none;
-border-bottom: 1px dotted #fff;
 font-weight: normal;
+font-size: 14px;
+
 }
 
 #menu_container a.current:before {
@@ -415,4 +454,50 @@ div.upsell {
 
 div.upsell .upselldescription {
 	padding-bottom: 10px;
+}
+/* login top */
+.login-top{
+	float:right;
+	height:20px;}
+	
+.login-top li{
+float:left;
+}
+.resaltado {
+float:left;
+margin:10px 10px 2px;
+padding:5px;
+text-align:center;
+border:1px solid silver;
+background:#fff;
+width:130px;
+height:auto;
+margin-bottom:20px;
+-moz-border-radius: 3px;
+-webkit-border-radius: 3px;
+}	
+.description, .description a {
+display:block;
+}
+.price, .price a {
+color:#ff0000;
+line-height:8px;
+font-weight:bold;
+}
+.producto-estrella {
+color:#004492;
+font-size:16px;
+border-bottom: 2px solid #fced21;
+background: url(../images/star-trans.png) no-repeat left bottom;
+padding: 0 0 0 31px;
+font-weight: normal;
+}
+
+.mas-vendido {
+color:#004492;
+font-size:16px;
+border-bottom: 2px solid #fced21;
+background: url(../images/money-simbol.png) no-repeat left bottom;
+padding: 0 0 0 31px;
+font-weight: normal;
 }
