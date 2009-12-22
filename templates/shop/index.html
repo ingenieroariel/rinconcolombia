@@ -2,13 +2,15 @@
 {% load i18n %}
 {% load thumbnail %}
 {% load satchmo_util %}
+{% load satchmo_price %}
+{% load satchmo_util satchmo_discounts %}
+{% load satchmo_currency satchmo_category %}
 
 {% block navbar %}
    <li class="first">{% trans "Home" %}</li>
 {% endblock %}
 
 {% block content %}
-{% trans "Welcome to the shop." %}
 
 {% if all_products_list %}
     <h4>{% trans "Featured Items" %}</h4>
@@ -16,11 +18,11 @@
             <div class = "productImage">    
            {% if product.main_image %}
               <center>
-              {% thumbnail product.main_image.picture 85x85 as image %}
+              {% thumbnail product.main_image.picture 500x400 as image %}
               <a href="{{ product.get_absolute_url }}"><img src="{{ image }}" width="{{ image.width }}" height="{{ image.height }}" /></a>
               </center>
            {% endif %}     
-            <p><a href="{{ product.get_absolute_url }}">{{ product.translated_name }}</a></p>
+            <p><a href="{{ product.get_absolute_url }}">{{ product.translated_name }}</a></p><p class="price">{{ product|discount_price:sale|currency }}</p>
         </div>
     {% endfor %}
 {% endif %}

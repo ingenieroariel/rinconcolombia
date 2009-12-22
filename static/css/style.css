@@ -363,11 +363,9 @@ font-weight: normal;
 font-size: 14px;
 
 }
-
-#menu_container a.current:before {
-content: "\0020 \0020 \0020 \00BB \0020";
+#menu_container a.current {
+text-decoration: underline !important; 
 }
-
 .addressblock {
 padding-top: .5em;
 padding-bottom: .5em;

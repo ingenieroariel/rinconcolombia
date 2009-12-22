@@ -74,59 +74,11 @@
 	</div>
 
 	<div id="sidebar-primary">{# rightnav #}
-	<h2 class="producto-estrella">Producto Estrella</h2>
-	<div class="resaltado">
-	<img src="{{ media_url }}images/botella.jpg" alt="botella" />
-	<div class="description">Botella</div>
-	<div class="price">$99,700</div>
-	</div>
-	<h2 class="mas-vendido">Lo mas vendido</h2>
-	<div class="resaltado">
-	<img src="{{ media_url }}images/botella.jpg" alt="botella" />
-	<div class="description">Botella</div>
-	<div class="price">$99,700</div>
-	</div>
-	
-	<!--	{% block sidebar-primary %}
-		<h3>{% trans "Quick Links" %}</h3>
-		{% url satchmo_product_recently_added as recenturl %}
-		{% if recenturl %}<a href="{{ recenturl }}">{% trans "Recently Added" %}</a>{% endif %}
-		{% url satchmo_product_best_selling as popularurl %}
-		{% if popularurl %}<br/><a href="{{ popularurl }}">{% trans "Best Sellers" %}</a>{% endif %}
-		{% plugin_point "sidebar_links" %}
-
-	   <h3>{% trans "Account Information" %}</h3>
-	    {% if user.is_staff %}
-		<a href="/admin" target="blank">{% trans "Admin" %}</a><br/>
-		{% endif %}
-	    {% if user.is_authenticated %}
-		{% url satchmo_account_info as accounturl %}
-        {% if accounturl %}<a href="{{ accounturl }}" target="blank">{% trans "Account Details" %}</a><br/>{% endif %}
-        <a href="{{ logout_url }}?next={{request.path}}">{% trans "Log out" %}</a><br/>
-	    {% else %}
-        <a href="{{ login_url }}?next={{request.path}}">{% trans "Log in" %}</a><br/>
-	    {% endif %}
-
-		{% url satchmo_cart as carturl %}
-	    {% if carturl %}<a href="{{ carturl }}">{% trans "Cart" %}</a>{% endif %}
-
-	    {% if cart_count %}
-        ({{ cart_count }}{% if cart.total %} - {{ cart|discount_cart_total:sale|currency }}{% endif %})<br/>
-		{% url satchmo_checkout-step1 as checkouturl %}
-        {% if checkouturl %}<a href="{{ checkouturl }}">{% trans "Check out" %}</a>{% endif %}
-	    {% endif %}
-	
-		{% plugin_point "shop_sidebar_actions" %}
-    
-		{% url satchmo_contact as contact_url %}
-	    {% if contact_url %}<p><a href="{{ contact_url }}">{% trans "Contact Us" %}</a></p>{% endif %}
-
-		{% satchmo_language_selection_form %}
-
-		{% block sidebar-primary-bottom %}
+	{% block sidebar-primary %}
+            {% block sidebar-primary-bottom %}
 		{% plugin_point "shop_sidebar_primary" %}
-		{% endblock %}
-		{% endblock sidebar-primary %}-->
+            {% endblock %}
+        {% endblock sidebar-primary %}
 	</div>
 
 	<div id="content">
