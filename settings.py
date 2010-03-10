@@ -202,6 +202,10 @@ logging.getLogger('keyedcache').setLevel(logging.INFO)
 logging.getLogger('l10n').setLevel(logging.INFO)
 logging.info("Satchmo Started")
 
+try:
+    # Load the local settings
+    from local_settings import *
+except:
+    #Do not spit an error if this file is not found
+    pass
 
-# Load the local settings
-from local_settings import *

@@ -4,6 +4,8 @@ django-registration
 PyYAML
 docutils 
 django-extensions
+django-cpserver
+cherrypy
 
 http://www.satchmoproject.com/snapshots/trml2pdf-1.2.tar.gz
 http://www.reportlab.org/ftp/ReportLab_2_3.tar.gz
@@ -14,4 +16,5 @@ http://typogrify.googlecode.com/files/typogrify-1.0.tar.gz
 -e hg+http://bitbucket.org/bkroeze/django-threaded-multihost/#egg=django-threaded-multihost
 -e hg+http://bitbucket.org/chris1610/satchmo/#egg=satchmo
 -e hg+http://hg.assembla.com/django-testimonials/#egg=django-testimonials
+-e hg+http://bitbucket.org/bkroeze/django-signals-ahoy/#egg=signals-ahoy
 -e git+git://github.com/robhudson/django-debug-toolbar.git#egg=django-debug-toolbar
