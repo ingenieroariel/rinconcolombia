@@ -10,6 +10,17 @@ padding: 0;
 margin-top: 0;
 }
 
+#featuredcontent {
+  top:-100px; left:0px; width:700px; height:100px
+  position:relative; 
+}
+
+#featuredtext{
+  font-size: 20px; 
+  font-color: "#fff" !important; 
+  text-shadow: 0px 3px 3px #ccc; 
+}
+
 #navbar {
 width: 100%;
 background: url(../images/back-navbar.png) bottom;
@@ -131,13 +142,13 @@ background: url(../images/back-sidebar.png) repeat-x;
 */
 
 #content {
-margin-left: 184px;
-margin-right: 184px;
-padding: 1em;
-background:url(../images/back-highligh.png) repeat-x #fced21;
-border-bottom: 2px solid #fced21;
--moz-border-radius: 0 0 3px 3px;
--webkit-border-radius:0 0 3px 3px;
+  padding: 2em;
+  margin-left: 184px;
+  margin-right: 184px;
+  border-bottom: 2px solid #fced21;
+  -moz-border-radius: 0 0 3px 3px;
+  -webkit-border-radius:0 0 3px 3px;
+  background:url(../images/back-sidebar.png) repeat-x #fff;
 }
 
 body {

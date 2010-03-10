@@ -4,6 +4,7 @@
 {% load i18n satchmo_category satchmo_google satchmo_util satchmo_currency satchmo_discounts app_plugins %}
 <head>
     {% block extra-head %}{% endblock %}
+    <link rel="shortcut icon" href="/static/images/fav-icon.png" />
     <link rel="stylesheet" href="{{ media_url }}css/style.css" />
     <title>{% block title %}{{ shop_name }}{% if pagetitle %}: {{ pagetitle }}{% endif %}{% endblock %}</title>
     {% plugin_point "page_head" %}

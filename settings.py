@@ -123,6 +123,7 @@ INSTALLED_APPS = (
     'django.contrib.comments',
     'django.contrib.sessions',
     'django.contrib.sitemaps',
+    'django.contrib.humanize',
     'registration',
     'sorl.thumbnail',
     'keyedcache',
