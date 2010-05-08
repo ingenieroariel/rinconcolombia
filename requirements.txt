@@ -8,7 +8,6 @@ django-cpserver
 cherrypy
 
 http://www.satchmoproject.com/snapshots/trml2pdf-1.2.tar.gz
-http://www.reportlab.org/ftp/ReportLab_2_3.tar.gz
 http://typogrify.googlecode.com/files/typogrify-1.0.tar.gz
 
 -e svn+http://django-app-plugins.googlecode.com/svn/trunk/#egg=django-app-plugins
