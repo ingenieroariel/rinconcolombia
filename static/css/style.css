@@ -307,6 +307,7 @@ border-bottom: 1px dashed #e0e0e0;
 background-color: white;
 float:left;
 width: 85px;
+margin: 0 0 0 15px;
 }
 
 #wishlist ul li:hover
@@ -400,6 +401,9 @@ text-decoration: underline !important;
 #intro {
 margin: 0 auto;
 overflow: hidden;
+}
+#intro h4 {
+clear: both;
 }
 .pdestacado {
 background: #fff;
