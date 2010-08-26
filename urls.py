@@ -4,7 +4,9 @@ from satchmo_store.urls import urlpatterns
 from django.conf import settings
 
 urlpatterns += patterns('',
-    (r'test/', include('rinconcolombia.localsite.urls'))
+    (r'test/', include('rinconcolombia.localsite.urls')),
+    (r'^comments/', include('django.contrib.comments.urls')),
+
 )
 
 if settings.DEBUG:

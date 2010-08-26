@@ -5,7 +5,7 @@
 import os
 import logging
 
-LOCAL_DEV = True
+LOCAL_DEV = True 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
@@ -143,10 +143,15 @@ INSTALLED_APPS = (
     'satchmo_ext.recentlist',
     'testimonials',
     'product',
+    'product.modules.configurable',
+    'product.modules.custom',
+    'product.modules.downloadable',
+    'product.modules.subscription',
     'satchmo_ext.product_feeds',
     'satchmo_ext.brand',
     'payment',
     'payment.modules.purchaseorder',
+    'payment.modules.paypal',
     'payment.modules.giftcertificate',
     'satchmo_ext.wishlist',
     'satchmo_ext.upsell',
@@ -201,6 +206,9 @@ logging.basicConfig(level=logging.DEBUG,
 logging.getLogger('keyedcache').setLevel(logging.INFO)
 logging.getLogger('l10n').setLevel(logging.INFO)
 logging.info("Satchmo Started")
+
+#Keys from keyczar
+ENCRYPTED_FIELD_KEYS_DIR= os.path.join(DIRNAME, 'keys/')
 
 try:
     # Load the local settings
