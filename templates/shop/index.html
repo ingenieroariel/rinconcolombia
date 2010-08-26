@@ -15,17 +15,15 @@
 
 {% if all_products_list %}
     {% for product in all_products_list %} 
-            <div id="intro">    
+            
            {% if product.main_image %}
-              <center>
-              {% thumbnail product.main_image.picture 700x700 as image %}
-              <a href="{{ product.get_absolute_url }}"><img src="{{ image }}" width="{{ image.width }}" height="{{ image.height }}" />
-              </a><div style="text-shadow: 0px 3px 3px #000; position:relative; top:-100px; left:0px; width:700px; height:100px">
-                <span style="font-size: 40px; color: #fff;">
-                 {{ product.translated_name }}<br/>
-                 <br/>${{ product|discount_price:sale|floatformat:"-2"|intcomma }}
-                </div></span></div></center>
-           {% endif %}     
+              {% thumbnail product.main_image.picture 650x350 crop="smart" as image %}
+<div class="pdestacado">
+                 <h3>{{ product.translated_name }} - ${{ product|discount_price:sale|floatformat:"-2"|intcomma }}</h3>
+            </div>            
+			<a href="{{ product.get_absolute_url }}"><img src="{{ image }}" width="{{ image.width }}" height="{{ image.height }}" />
+              </a>
+            		   {% endif %}     
         </div>
     {% endfor %}
 {% endif %}

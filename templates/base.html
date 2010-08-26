@@ -54,7 +54,11 @@
    
 </ul>
    </div>
-    <div id="sidebar-secondary">
+ 
+
+	<div id="content">
+
+	   <div id="sidebar-secondary">
 		{% block sidebar-secondary %}
 		
 		<div>
@@ -72,19 +76,24 @@
 			{% endblock sidebar %}
 		</div>
 		{% endblock sidebar-secondary %}
-	</div>
+	</div> <!-- fin del sidebar secundary -->
 
-	<div id="sidebar-primary">{# rightnav #}
+	
+		    <div id="sidebar-primary">{# rightnav #}
 	{% block sidebar-primary %}
             {% block sidebar-primary-bottom %}
 		{% plugin_point "shop_sidebar_primary" %}
             {% endblock %}
         {% endblock sidebar-primary %}
-	</div>
-
-	<div id="content">
-	    {% block content %}{% endblock %}
-	</div>
+	</div><!-- fin del sidebar primary -->
+		
+		<div id="intro">
+		{% block content %}{% endblock %}
+	    </div>
+	
+	
+	
+	</div> <!-- fin content -->
 
 	<div id="footer">
 		{% block footer %}
