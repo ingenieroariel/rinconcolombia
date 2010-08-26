@@ -85,21 +85,29 @@
 		{% plugin_point "shop_sidebar_primary" %}
             {% endblock %}
         {% endblock sidebar-primary %}
+	
+
+	
 	</div><!-- fin del sidebar primary -->
 		
 		<div id="intro">
 		{% block content %}{% endblock %}
 	    </div>
 	
-	
+		<div id="footer">
+		{% block footer %}
+		<ul>
+		<li><a href="#"> categorias </a></li>
+		<li><a href="#"> categorias </a></li>
+		<li><a href="#"> categorias </a></li>
+		<li><a href="#"> categorias </a></li>
+		</ul>
+		{% endblock %}
+	</div>	
 	
 	</div> <!-- fin content -->
 
-	<div id="footer">
-		{% block footer %}
-		
-		{% endblock %}
-	</div>
+
 
     </div>
 	{% block page-close %}
