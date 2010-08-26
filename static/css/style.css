@@ -302,12 +302,12 @@ background-color: #ccc;
 #wishlist ul li,
 #product_category ul li {
 list-style: none;
-padding: 0.5em;
+padding: 0.1em;
 border-bottom: 1px dashed #e0e0e0;	
 background-color: white;
 float:left;
-width: 85px;
-margin: 0 0 0 15px;
+width: 120px;
+margin: 0 0 0 2px;
 }
 
 #wishlist ul li:hover

@@ -41,11 +41,10 @@
 </li>
 <li>
 		{% url satchmo_cart as carturl %}
-<li>	    {% if carturl %}<a href="{{ carturl }}">{% trans "Cart" %}</a>{% endif %}</li>
-
-	    {% if cart_count %}
-        ({{ cart_count }}{% if cart.total %} - {{ cart|discount_cart_total:sale|currency }}{% endif %})<br/>
-		{% url satchmo_checkout-step1 as checkouturl %}
+<li>	    {% if carturl %}<a href="{{ carturl }}">{% trans "Cart" %}</a>{% endif %}  {% if cart_count %}
+     ({{ cart_count }}{% if cart.total %} - {{ cart|discount_cart_total:sale|currency }}{% endif %}) 
+</li>
+{% url satchmo_checkout-step1 as checkouturl %}
 <li>        {% if checkouturl %}<a href="{{ checkouturl }}">{% trans "Check out" %}</a>{% endif %}</li>
 	    {% endif %}
 </li>
@@ -96,12 +95,7 @@
 	
 		<div id="footer">
 		{% block footer %}
-		<ul>
-		<li><a href="#"> categorias </a></li>
-		<li><a href="#"> categorias </a></li>
-		<li><a href="#"> categorias </a></li>
-		<li><a href="#"> categorias </a></li>
-		</ul>
+                 <p>Todos los derechos reservados. Rinc&oacute;n Colombia. 2010</p>
 		{% endblock %}
 	</div>	
 	
