@@ -4,6 +4,7 @@
 {% load i18n satchmo_category satchmo_google satchmo_util satchmo_currency satchmo_discounts app_plugins %}
 <head>
     {% block extra-head %}{% endblock %}
+    <link href='http://fonts.googleapis.com/css?family=OFL+Sorts+Mill+Goudy+TT:regular,italic' rel='stylesheet' type='text/css'>
     <link rel="shortcut icon" href="/static/images/fav-icon.png" />
     <link rel="stylesheet" href="{{ media_url }}css/style.css" />
     <title>{% block title %}{{ shop_name }}{% if pagetitle %}: {{ pagetitle }}{% endif %}{% endblock %}</title>
@@ -13,14 +14,14 @@
 <body{% if bodyid %} id="{{ bodyid }}"{% endif %}{% if bodyclass %} class="{{ bodyclass }}"{% endif %}>
     {% plugin_point "page_top" %}
     <div id="container">
-	    <div id="top"><div id="logo">
+<div id="top_wrapper">	    <div id="top"><div id="logo">
 	        <!--<h1>{{ shop_name }}</h1>--><h1><img src="{{ media_url }}images/logo-trans.png" alt="Rincon Colombia" title="ir al inicio" /></h1>
 	    		</div>
 				
 				<div id="search">
 			{% satchmo_search_form %}
 		</div>
-		</div> <!-- fin de top -->
+
 	    <div id="navbar">
 	    <ul>
 	    	{% block navbar %}Breadcrumbs here{% endblock %}
@@ -54,6 +55,10 @@
 </ul>
    </div>
  
+		</div> <!-- fin de top -->
+            <div id="top_btm"></div>
+<!-- fin top wrapper -->
+</div>
 
 	<div id="content">
 
@@ -68,10 +73,11 @@
 				{% category_tree %}
 			</div>
 			{% endblock sidebar-categories %}
-			
+		{% comment %}	
 			{% block sidebar-secondary-bottom %}
 			{% plugin_point "sidebar_secondary_bottom" %}
 			{% endblock %}
+                {% endcomment %}
 			{% endblock sidebar %}
 		</div>
 		{% endblock sidebar-secondary %}
