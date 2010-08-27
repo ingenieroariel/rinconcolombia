@@ -1,10 +1,8 @@
 /* @override http://localhost:8000/static/css/style.css */
 
 #container {
-width: 980px;
-margin: 10px auto;
-background-color: #fff;
-color: #333;
+margin: 0px;
+color: #111;
 line-height: 180%;
 padding: 0;
 margin-top: 0;
@@ -23,18 +21,13 @@ margin-top: 0;
 
 #navbar {
 width: 100%;
-background: url(../images/back-navbar.png) bottom;
-border-bottom: 1px solid #ccc;
-color: #333;
+color: #111;
 height:22px;
 margin:0;
 padding:0;
 }
 #navbarii {
 float:right;
-background:url(../images/top-sidebar1.png);
-background-repeat:no-repeat;
-background-position: right bottom -10px;
 width:199px;
 height:35px;
 border-bottom: 1px solid #F4E500;
@@ -43,24 +36,38 @@ margin-top:161px;
 }
 
 a {
-color:#666;
+color:#222;
 }
 a:hover{
-color:#333;
+color:#111;
 }
-#top {
+
+#top_wrapper{
+
 background-color: #ddd;
-height:110px;
-border-top: 3px red solid;
-background: url(../images/back-top.png) repeat-x ;
-margin:0 !important;
+background:url("../images/bck_top.jpg") repeat-x scroll 0 0 transparent;
+width: 100%;
 }
+
+#top {
+width: 980px;
+height:114px;
+margin:0 auto !important;
+z-index:-999;
+}
+#top_btm {
+background:url("../images/bck_btm.png") repeat-x scroll center top transparent;
+height:62px;
+position:relative;
+z-index:1;
+}
+
 
 #top h1 {
 padding: 0;
 margin: 0;
 text-align:center;
-padding:20px 0 0 20px;
+padding:10px 0 0 20px;
 position:absolute;
 
 }
@@ -73,7 +80,7 @@ height:63px;
 float:left;
 width:500px;
 height:30px;
-margin-top:7px;
+margin-top:2px;
 margin-left:25px;
 }
 
@@ -119,7 +126,7 @@ padding: 0 1em 1em 1em;
 	font-weight: bold;
 	margin-bottom: 0.1em;
 	margin-top: 0;	
-	color:#ff0000;
+	color:#814B23;
 	text-shadow: 0px 1px 1px #ccc;
 	padding-bottom: 3px; 
 	font-family:sans-serif;
@@ -139,21 +146,23 @@ padding: 0 1em 1em 1em;
 */
 
 #content {
-  padding: 2em 0 2em 0;
-  border-bottom: 2px solid #fced21;
+  background:url("../images/bck_blur.jpg") repeat-y center top transparent;
   -moz-border-radius: 0 0 3px 3px;
   -webkit-border-radius:0 0 3px 3px;
   border-radius: 0 0 3px 3px;
-  background:url(../images/back-sidebar.png) repeat-x #fff;
   overflow: hidden;
+  margin:-31px auto 0;
+  padding: 25px 0 0 0;
+  z-index:2;
+  width: 980px;
 }
 
 body {
-	font-family:  "Arial", serif;
-	font-size: 12px;
-	margin-top: 0px;
-	padding-top: 0px;
-	background:#fff;
+	font-family:  'OFL Sorts Mill Goudy TT', "Arial", serif;
+	font-size: 14px;
+	margin: 0px;
+	padding: 0px;
+	background:#ddd0b8 url(../images/bck.gif) top center;
 }
 
 #pagination {
@@ -205,12 +214,12 @@ font-size: 12px;
 
 #footer {
 clear: both;
-margin: 0;
 padding: .5em .5em .5em 0;
-color: #333;
-background: url(../images/back-navbar.png) repeat-x bottom;
+color: #111;
 overflow: hidden;
-border-bottom: 1px solid #ccc;
+width: 980px;
+margin: 0 auto;
+border-top: 1px solid #814B23;
 }
 #footer ul{
 margin: 0;
@@ -221,7 +230,9 @@ padding: 0 10px 0 10px;
 list-style:none;
 border-left: 1px solid #ccc;
 }
-
+#footer p {
+text-align: center;
+}
 #sidebar-secondary p, #sidebar-primary p { margin: 0 0 1em 0; }
 #content h2 { margin: 0 0 .5em 0; }
 
@@ -246,7 +257,7 @@ border-radius: 3px;
 
 .brandImage,
 .productImage:hover {
-border:solid 1px #ff0000;
+border:solid 1px #814B23;
 border-collapse:collapse;
 }
 
@@ -302,12 +313,16 @@ background-color: #ccc;
 #wishlist ul li,
 #product_category ul li {
 list-style: none;
-padding: 0.1em;
+padding: 5px;
 border-bottom: 1px dashed #e0e0e0;	
 background-color: white;
 float:left;
 width: 120px;
 margin: 0 0 0 2px;
+font-size: 20px;
+text-align: center;
+font-weight: bold;
+font-family: 'OFL Sorts Mill Goudy TT', arial, serif; 
 }
 
 #wishlist ul li:hover
@@ -318,6 +333,7 @@ margin: 0 0 0 2px;
 #wishlist ul li a,
 #product_category ul li a {
 	display: block;
+        text-decoration: none;
 }
 
 #wishlist span.date {
@@ -351,7 +367,7 @@ padding: 0;
 }
 
 #menu_container a {
-color: #FF0000;
+color: #814B23;
 text-shadow: 0 1px 1px #fff;
 text-decoration: none;
 font-weight: bold;
@@ -363,7 +379,7 @@ letter-spacing: 2px;
 
 #menu_container a:hover {
 text-decoration:underline;
-color:#333;
+color:#111;
 text-shadow: 0 1px 1px #fff;
 }
 
@@ -377,7 +393,7 @@ list-style-type: circle !important;
 
 #menu_container li li a {
 
-color: #666;
+color: #222;
 padding: 0 !important;
 text-decoration: none;
 font-weight: normal;
@@ -387,7 +403,7 @@ letter-spacing: 0;
 }
 
 #menu_container li li li a {
-color: #666;
+color: #222;
 padding: 3px 8px 3px 0;
 text-decoration: none;
 font-weight: normal;
@@ -460,14 +476,18 @@ img {
 
 /* =============== Navigation Bars ===================== */
 #navbar {
-background:url("../images/back-navbar.png") repeat scroll center bottom transparent;
-border-bottom:1px solid #CCCCCC;
-color:#333333;
+color: #eee;
 height:5px;
-line-height:10px;
-padding:0 0 15px;
+line-height:15px;
+padding:10px 0 10px;
 width:100%;
+font-size: 16px;
+float:left;
 }
+#navbar a{
+color: #eee;
+}
+
 #navbar ul {		
 	margin: 1em;
 	padding: 0px;
@@ -541,7 +561,7 @@ border-radius: 3px;
 display:block;
 }
 .price, .price a {
-color:#ff0000;
+color:#814B23;
 line-height:8px;
 font-weight:bold;
 }
