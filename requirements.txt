@@ -18,4 +18,5 @@ cherrypy
 -e hg+http://bitbucket.org/bkroeze/django-signals-ahoy/#egg=signals-ahoy
 #-e git+git://github.com/robhudson/django-debug-toolbar.git#egg=django-debug-toolbar
 -e hg+http://bitbucket.org/bkroeze/django-keyedcache/#egg=django-keyedcache
+-e hg+http://bitbucket.org/bkroeze/django-caching-app-plugins/#egg=django-caching-app-plugins
 -e hg+http://bitbucket.org/bkroeze/django-livesettings/#egg=django-livesettings
