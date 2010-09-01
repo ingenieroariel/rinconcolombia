@@ -10,7 +10,7 @@
 {% endblock %}
 
 {% block navbar %}
-    <li class="first"><a href="{{ shop_base }}/">{% trans "Home" %}</a></li>
+    <li class="first"><a href="/">{% trans "Home" %}</a></li>
 	{% for parent in category.parents %}<li><a href="{{ parent.get_absolute_url }}">{{ parent.translated_name }}</a></li>{% endfor %}
 	<li>{{ category.translated_name }}</li>
 {% endblock %}
